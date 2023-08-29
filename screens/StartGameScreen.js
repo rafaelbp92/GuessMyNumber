@@ -1,5 +1,5 @@
 import { TextInput, View, StyleSheet, Alert } from "react-native";
-import PrimaryButton from "../components/PrimaryButton";
+import PrimaryButton from "../components/ui/PrimaryButton";
 import { useState } from "react";
 import Colors from "../constants/colors";
 
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     padding: 16,
     marginTop: 100,
     marginHorizontal: 16,
-    backgroundColor: Colors.secondary500,
+    backgroundColor: Colors.primary700,
     borderRadius: 8,
     elevation: 4,
     shadowColor: "black",
