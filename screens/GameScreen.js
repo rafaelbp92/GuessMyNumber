@@ -119,9 +119,13 @@ function GameScreen({ userNumber, onGameOver }) {
       </>
     );
   }
+  let marginTop = 0;
+  if (height > 450) {
+    marginTop =  50
+  }
 
   return (
-    <View style={styles.screen}>
+    <View style={[styles.screen, { marginTop: marginTop}]}>
       <Title>Opponent's Guess!</Title>
       {content}
       <View style={styles.listContainer}>

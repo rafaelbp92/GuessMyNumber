@@ -19,7 +19,7 @@ function GameOver({ roundsNumber, userNumber, onStartNewGame }) {
     imageSize = 150;
   }
 
-  if (height < 400) {
+  if (height < 450) {
     imageSize = 80;
   }
 
@@ -29,9 +29,15 @@ function GameOver({ roundsNumber, userNumber, onStartNewGame }) {
     borderRadius: imageSize / 2,
   };
 
+  let marginTop = 0;
+  
+  if (height > 450) {
+    marginTop =  50
+  }
+
   return (
     <ScrollView style={styles.screen}>
-      <View style={styles.rootContainer}>
+      <View style={[styles.rootContainer, { marginTop: marginTop }]}>
         <Title>GAME OVER!</Title>
         <View style={[styles.imageContainer, imageStyle]}>
           <Image
@@ -62,6 +68,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 24,
     justifyContent: "center",
+    alignItems: "center"
   },
   imageContainer: {
     // borderRadius: deviceWith < 380 ? 75 : 150,
